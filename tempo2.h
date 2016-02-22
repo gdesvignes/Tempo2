@@ -180,7 +180,7 @@ enum label {
     param_telx,param_tely,param_telz,param_telEpoch,param_quad_ifunc_p,
     param_quad_ifunc_c,param_tel_dx,param_tel_dy,param_tel_dz,
     param_tel_vx,param_tel_vy,param_tel_vz,param_tel_x0,param_tel_y0,param_tel_z0,param_gwm_amp,param_gwecc,param_gwb_amp,
-    param_dm_sin1yr,param_dm_cos1yr,param_brake,param_stateSwitchT,param_df1,
+    param_dm_sin1yr,param_dm_cos1yr,param_brake,param_stateSwitchT,param_df1,param_dist,
     // ** ADD NEW PARAMETERS ABOVE HERE **
     // THE BELOW LINE MUST BE THE LAST LINE IN THIS ENUM
     param_LAST, /*!< Marker for the last param to be used in for loops  */
@@ -905,6 +905,10 @@ extern "C" {
     void updateDDH( pulsar *psr, double val, double err, int pos );
     double ELL1Hmodel( pulsar *psr, int p, int obs, int param );
     void updateELL1H( pulsar *psr, double val, double err, int pos );
+    // Verbiest (TODO)
+    longdouble D3model(pulsar *psr, int p, int obs, int param);
+    void updateD3(pulsar *psr, double val, double err, int pos);
+    long double Kz_HF04( long double zz );
 
     void displayMsg(int type,const char *key,const char *searchStr,const char *variableStr,int noWarnings);
     void CVSdisplayVersion(const char *file,const char *func,const char *verNum);

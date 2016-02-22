@@ -501,6 +501,8 @@ void initialiseOne (pulsar *psr, int noWarnings, int fullSetup)
     strcpy(psr->param[param_tspan].shortlabel[0],"TSPAN");
     strcpy(psr->param[param_brake].label[0],"BRAKING INDEX"); 
     strcpy(psr->param[param_brake].shortlabel[0],"BRAKE");
+    strcpy(psr->param[param_dist].label[0],"DISTANCE (pc)"); 
+    strcpy(psr->param[param_dist].shortlabel[0],"DISTANCE");
 
 
     for (k=0;k<psr->param[param_bpjep].aSize;k++)

@@ -620,6 +620,8 @@ void checkLine(pulsar *psr,char *str,FILE *fin,parameter *elong, parameter *elat
     }
     else if (strcasecmp(str,"PX")==0) /* Parallax */
         readValue(psr,str,fin,&(psr->param[param_px]),0);
+    else if (strcasecmp(str,"DIST")==0) /* Distance in pc */
+        readValue(psr,str,fin,&(psr->param[param_dist]),0);
     else if (strcasecmp(str,"DM_S1YR")==0) /* DM sinusoid */
         readValue(psr,str,fin,&(psr->param[param_dm_sin1yr]),0);
     else if (strcasecmp(str,"DM_C1YR")==0) /* DM sinusoid */

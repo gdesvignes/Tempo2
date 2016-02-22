@@ -2384,6 +2384,8 @@ double getParamDeriv(pulsar *psr,int ipos,double x,int i,int k)
         afunc = DDSmodel(psr,0,ipos,i);	  
     else if (strcmp(psr->binaryModel,"DDGR")==0) 
         afunc = DDGRmodel(psr,0,ipos,i);	  
+    else if (strcmp(psr->binaryModel,"D3")==0) 
+        afunc = D3model(psr,0,ipos,i);	  
     else if (strcmp(psr->binaryModel,"MSS")==0) 
         afunc = MSSmodel(psr,0,ipos,i);
     else if (strcmp(psr->binaryModel,"T2")==0) 
@@ -3120,6 +3122,8 @@ void updateParameters(pulsar *psr,int p,double *val,double *error)
                     updateDDS(&psr[p],val[j],error[j],i);
                 else if (strcmp(psr[p].binaryModel,"DDGR")==0)
                     updateDDGR(&psr[p],val[j],error[j],i);
+                else if (strcmp(psr[p].binaryModel,"D3")==0)
+                    updateD3(&psr[p],val[j],error[j],i);
                 else if (strcmp(psr[p].binaryModel,"MSS")==0)
                     updateMSS(&psr[p],val[j],error[j],i);
                 else if (strcmp(psr[p].binaryModel,"T2")==0)
