@@ -15,3 +15,5 @@ planet_plug.C
 glast_plug.C
 compareDsets_plug.C
 efacEquad_plug.C
+4DCube_plug.C
+3DCube_plug.C

@@ -136,6 +136,8 @@ double t2FitFunc_binaryModels(pulsar *psr, int ipsr ,double x ,int ipos ,param_l
         afunc = DDSmodel(psr,0,ipos,label);
     else if (strcmp(psr[ipsr].binaryModel,"DDGR")==0)
         afunc = DDGRmodel(psr,0,ipos,label);
+    else if (strcmp(psr[ipsr].binaryModel,"D3")==0)
+        afunc = D3model(psr,0,ipos,label);
     else if (strcmp(psr[ipsr].binaryModel,"MSS")==0)
         afunc = MSSmodel(psr,0,ipos,label);
     else if (strcmp(psr[ipsr].binaryModel,"T2")==0)
